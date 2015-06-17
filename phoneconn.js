@@ -156,6 +156,14 @@ function Phone( clientname ){
 		if (nbr != "")	
 			mctabuff.Command("_CMD=CALL_OUT;ADDR=" + nbr + ";_SAP_ID=MCTABUFF;");
 	}
+
+	//------------------------------------------------------
+	//  play file
+	//------------------------------------------------------
+	this.playFile = function(filename){
+		if (filename != "")	
+			mctabuff.Command("_CMD=PLAY_FILE;Filename=" + filename + ";_SAP_ID=MCTABUFF;");
+	}
 	
 	//------------------------------------------------------
 	//  commands: answer, hangup, hold, unhold, transfer...
